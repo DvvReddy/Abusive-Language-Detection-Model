@@ -1,6 +1,6 @@
 # Abusive-Language-Detection-Model
-Multilingual Toxicity Detector A cross-lingual model for identifying abusive content and offensive language. Currently in active development; open to contributions.
-Multi-Language Toxicity Detector 🛡️
+Multilingual Toxicity Detector A cross-lingual model for identifying abusive content and offensive language. 
+Currently in active development; open to contributions.
 
 
 🚀 Hugging Face Model
@@ -8,12 +8,10 @@ The model is hosted and available for inference on Hugging Face: [View Model on 
 
 📂 Project Structure
 model1-training.py: The core script used for fine-tuning the transformer model.
-
 tokenizer.json / config.json: Configuration files for reproducing the model's vocabulary and architecture.
-
 scaler.pt / scheduler.pt: Checkpoints for optimization states and gradient scaling.
-
 trainer_state.json: Detailed logs of the training metrics and loss history.
+
 
 🛠️ Usage
 Prerequisites
