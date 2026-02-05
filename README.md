@@ -16,8 +16,12 @@ trainer_state.json: Detailed logs of the training metrics and loss history.
 🛠️ Usage
 Prerequisites
 
+
 Bash
+
+
 pip install transformers torch
+
 Basic Inference
 
 You can load the model directly using the transformers library:
