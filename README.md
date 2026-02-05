@@ -26,29 +26,24 @@ Basic Inference
 
 You can load the model directly using the transformers library:
 
-Python
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
-import torch
 
-model_path = "path_to_your_downloaded_files"
-tokenizer = AutoTokenizer.from_pretrained(model_path)
-model = AutoModelForSequenceClassification.from_pretrained(model_path)
+# Install the Hugging Face CLI
+brew install huggingface-cli
 
-text = "Your sample comment here"
-inputs = tokenizer(text, return_tensors="pt")
+# (optional) Login with your Hugging Face credentials
+hf auth login
 
-with torch.no_grad():
-    logits = model(**inputs).logits
-    prediction = torch.softmax(logits, dim=1)
+# Push your model files
+hf upload Dvvreddy/70-SPDM . 
 
-print(f"Toxicity Score: {prediction[0][1].item():.4f}")
+
+
+
 🏗️ Active Development
 Note: This model is currently in a "Work in Progress" phase. We are continuously improving accuracy across low-resource languages.
 
 How to Contribute
-
 Report Issues: If you find language-specific bias, please open an issue.
-
 Dataset Expansion: Contributions to multilingual toxicity datasets are highly encouraged.
 
 Refine Model: Feel free to fork the repo and submit a PR with improved training arguments.
